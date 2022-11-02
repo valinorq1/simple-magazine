@@ -6,8 +6,8 @@
  - [aiogram_dialogs](https://github.com/Tishka17/aiogram_dialog/tree/master)
  - [djangorestframework](https://github.com/encode/django-rest-framework) 
 
-#frontend
+# frontend
 - aiogram + aiogram_dialog
 
-#backend
+# backend
 - Django Rest Framework
