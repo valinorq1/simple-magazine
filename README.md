@@ -2,4 +2,4 @@
 Учебный проект[просто магазинчик]
 
 # Блиблиотеки:
- - aiogram, aiogram_dialogs, django rest framework
+ - aiogram, aiogram_dialogs, djangorestframework
