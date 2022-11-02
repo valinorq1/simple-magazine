@@ -1,5 +1,8 @@
 # simple-magazine
-Учебный проект[просто магазинчик]
+Учебный проект[просто магазинчик] продажа ноутбуков через телеграм бота.
 
-# Блиблиотеки:
- - aiogram, aiogram_dialogs, djangorestframework
+# Библиотеки:
+ - aiogram
+ - aiogram_dialogs
+ - djangorestframework
+
