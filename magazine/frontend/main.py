@@ -50,12 +50,17 @@ async def cmd_start(message: Message):
 
 async def get_button():
     data = ["pasha", "misha", "lesha"]
+    data2 = [
+        {"client": "pasha", "id": 5},
+        {"client": "misha", "id": 6},
+        {"client": "lesha", "id": 7},
+    ]
     buttons = []
-    for i in data:
+    for i in data2:
         buttons.append(
             InlineKeyboardButton(
-                f"🐝 {i}",
-                callback_data=moder_cb.new(action="select_moder", id=i),
+                f"🐝 {i['client']} (#{i['id']})",
+                callback_data=moder_cb.new(action="select_moder", id=i["id"]),
             )
         )
     keyboard = InlineKeyboardMarkup()
