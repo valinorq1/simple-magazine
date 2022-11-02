@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Profile(models.Model):
-    """Наследуемся от базовой модели User которую предоставляет Django"""
+    """Базовая информация о клиенте"""
 
     telegram_id = models.IntegerField(primary_key=True)
     telegram_username = models.CharField(max_length=64, null=True)
@@ -16,6 +16,8 @@ class Profile(models.Model):
 
 
 class UserPurchase(models.Model):
+    """Покупки пользователя. Будем их отображать в личном кабинете"""
+
     owner = models.ForeignKey(
         Profile, related_name="purchases", on_delete=models.CASCADE
     )
@@ -32,6 +34,8 @@ class UserPurchase(models.Model):
 
 
 class UserProductOnSale(models.Model):
+    """Активные продажи пользователя"""
+
     owner = models.ForeignKey(Profile, related_name="onsales", on_delete=models.CASCADE)
     product_title = models.CharField(max_length=128)
     product_image = models.CharField(max_length=256, null=True)
